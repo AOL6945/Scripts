@@ -14,10 +14,10 @@ Function Copy-Dossiers {
         [int]$valeur
     )
 
-    $pccible         = Read-Host "`n`tEntrez le nom de l'ordinateur Ancien (Ex. CNMTLO112233) "
-    $pcdestination   = Read-Host "`n`tEntrez le nom de l'ordinateur Destination               "
-    $usercible       = Read-Host "`n`tEntrez le nom d'utilisateur source                      "
-    $userdestination = Read-Host "`n`tEntrez le nom d'utilisateur Nouveau (Ex. CNMTLO445566)  "
+    $pccible         = Read-Host "`n`tEntrez le nom de l'ordinateur Source (Ex. CNMTLO112233 )     "
+    $pcdestination   = Read-Host "`n`tEntrez le nom de l'ordinateur Destination                    "
+    $usercible       = Read-Host "`n`tEntrez le nom d'utilisateur source                           "
+    $userdestination = Read-Host "`n`tEntrez le nom d'utilisateur Destination (Ex. CNMTLO445566 )  "
 
 
     Write-Host "`nDémarrage du transfert de données pour l'utilisateur $usercible..." -ForegroundColor Cyan
