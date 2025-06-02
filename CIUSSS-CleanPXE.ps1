@@ -1,4 +1,31 @@
-﻿# SCRIPT
+<#
+.SYNOPSIS
+    Prépare un ordinateur distant pour un redémarrage en PXE en supprimant les fichiers temporaires générés par MDT/SCCM.
+
+.DESCRIPTION
+    Ce script PowerShell permet de supprimer à distance, via un partage administratif réseau (\\NOM_PC\C$),
+    les dossiers et fichiers suivants nécessaires à la réinitialisation d’un déploiement par PXE :
+        - C:\MININT
+        - C:\_SMSTaskSequence
+        - C:\unattend.xml
+
+    Il demande à l'utilisateur de saisir le nom du poste cible (ex. CNMTLO123456), puis vérifie et supprime 
+    les éléments sur le système distant. Aucune configuration WinRM n’est requise.
+
+    Ce script est utilisé dans le cadre du département Déploiement et services du CIUSSS du Nord-de-l’Île-de-Montréal.
+
+.AUTEUR
+    Ait Ouakli Larbi
+
+.DATE
+    Mai 2025
+
+.VERSION
+    1.0
+
+#>
+
+# --------------------------------------------------------------------------------- SCRIPT-----------------------------------------------------------------
 
 # À exécuter localement avec des droits admin
 Clear-Host
